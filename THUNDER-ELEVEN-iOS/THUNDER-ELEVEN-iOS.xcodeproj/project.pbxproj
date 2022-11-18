@@ -34,6 +34,11 @@
 		DDA81A1E292761BD00AFD33B /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA81A1D292761BD00AFD33B /* NetworkConstant.swift */; };
 		DDA81A20292761C900AFD33B /* StatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA81A1F292761C900AFD33B /* StatusHandler.swift */; };
 		DDA81A22292761D900AFD33B /* StatusCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA81A21292761D900AFD33B /* StatusCase.swift */; };
+		DDA81A25292762D700AFD33B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = DDA81A24292762D700AFD33B /* Moya */; };
+		DDA81A28292762E600AFD33B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DDA81A27292762E600AFD33B /* SnapKit */; };
+		DDA81A2B292762F300AFD33B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DDA81A2A292762F300AFD33B /* Then */; };
+		DDA81A2E292762FF00AFD33B /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = DDA81A2D292762FF00AFD33B /* SwiftyColor */; };
+		DDA81A312927633800AFD33B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DDA81A302927633800AFD33B /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +78,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA81A2E292762FF00AFD33B /* SwiftyColor in Frameworks */,
+				DDA81A25292762D700AFD33B /* Moya in Frameworks */,
+				DDA81A2B292762F300AFD33B /* Then in Frameworks */,
+				DDA81A28292762E600AFD33B /* SnapKit in Frameworks */,
+				DDA81A312927633800AFD33B /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +292,13 @@
 			dependencies = (
 			);
 			name = "THUNDER-ELEVEN-iOS";
+			packageProductDependencies = (
+				DDA81A24292762D700AFD33B /* Moya */,
+				DDA81A27292762E600AFD33B /* SnapKit */,
+				DDA81A2A292762F300AFD33B /* Then */,
+				DDA81A2D292762FF00AFD33B /* SwiftyColor */,
+				DDA81A302927633800AFD33B /* Kingfisher */,
+			);
 			productName = "THUNDER-ELEVEN-iOS";
 			productReference = DDA819C429275E5900AFD33B /* THUNDER-ELEVEN-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -310,6 +327,13 @@
 				Base,
 			);
 			mainGroup = DDA819BB29275E5900AFD33B;
+			packageReferences = (
+				DDA81A23292762D700AFD33B /* XCRemoteSwiftPackageReference "Moya" */,
+				DDA81A26292762E600AFD33B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DDA81A29292762F300AFD33B /* XCRemoteSwiftPackageReference "Then" */,
+				DDA81A2C292762FF00AFD33B /* XCRemoteSwiftPackageReference "SwiftyColor" */,
+				DDA81A2F2927633800AFD33B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = DDA819C529275E5900AFD33B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -568,6 +592,77 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DDA81A23292762D700AFD33B /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		DDA81A26292762E600AFD33B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		DDA81A29292762F300AFD33B /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		DDA81A2C292762FF00AFD33B /* XCRemoteSwiftPackageReference "SwiftyColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/SwiftyColor";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		DDA81A2F2927633800AFD33B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DDA81A24292762D700AFD33B /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDA81A23292762D700AFD33B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		DDA81A27292762E600AFD33B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDA81A26292762E600AFD33B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		DDA81A2A292762F300AFD33B /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDA81A29292762F300AFD33B /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		DDA81A2D292762FF00AFD33B /* SwiftyColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDA81A2C292762FF00AFD33B /* XCRemoteSwiftPackageReference "SwiftyColor" */;
+			productName = SwiftyColor;
+		};
+		DDA81A302927633800AFD33B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDA81A2F2927633800AFD33B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DDA819BC29275E5900AFD33B /* Project object */;
 }
