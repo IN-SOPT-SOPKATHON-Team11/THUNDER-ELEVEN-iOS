@@ -39,6 +39,8 @@
 		DDA81A2B292762F300AFD33B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DDA81A2A292762F300AFD33B /* Then */; };
 		DDA81A2E292762FF00AFD33B /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = DDA81A2D292762FF00AFD33B /* SwiftyColor */; };
 		DDA81A312927633800AFD33B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DDA81A302927633800AFD33B /* Kingfisher */; };
+		E79B6DF729276C6D00789BBB /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B6DF629276C6D00789BBB /* AppTabBarController.swift */; };
+		E79B6DF929276D2300789BBB /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B6DF829276D2300789BBB /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		DDA81A1D292761BD00AFD33B /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		DDA81A1F292761C900AFD33B /* StatusHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusHandler.swift; sourceTree = "<group>"; };
 		DDA81A21292761D900AFD33B /* StatusCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCase.swift; sourceTree = "<group>"; };
+		E79B6DF629276C6D00789BBB /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
+		E79B6DF829276D2300789BBB /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 		DDA819E329275EB600AFD33B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E79B6DF629276C6D00789BBB /* AppTabBarController.swift */,
 				DDA819F829275F7300AFD33B /* Main */,
 			);
 			path = Presentation;
@@ -203,6 +208,7 @@
 				DDA819F229275F5A00AFD33B /* UIImage+.swift */,
 				DDA819F429275F6400AFD33B /* UILabel+.swift */,
 				DDA819F629275F6D00AFD33B /* UIFont+.swift */,
+				E79B6DF829276D2300789BBB /* BaseNavigationController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79B6DF929276D2300789BBB /* BaseNavigationController.swift in Sources */,
 				DDA81A20292761C900AFD33B /* StatusHandler.swift in Sources */,
 				DDA81A0A292760B600AFD33B /* MainResponse.swift in Sources */,
 				DDA81A1C292761B500AFD33B /* GeneralResponse.swift in Sources */,
@@ -379,6 +386,7 @@
 				DDA819CA29275E5900AFD33B /* SceneDelegate.swift in Sources */,
 				DDA81A1A2927610E00AFD33B /* NetworkBase.swift in Sources */,
 				DDA81A14292760F500AFD33B /* BaseTargetType.swift in Sources */,
+				E79B6DF729276C6D00789BBB /* AppTabBarController.swift in Sources */,
 				DDA81A0F292760CB00AFD33B /* MainService.swift in Sources */,
 				DDA819F329275F5A00AFD33B /* UIImage+.swift in Sources */,
 				DDA81A1E292761BD00AFD33B /* NetworkConstant.swift in Sources */,
