@@ -5,4 +5,8 @@
 //  Created by 양정연 on 2022/11/18.
 //
 
-import Foundation
+import UIKit.UIFont
+
+extension UIFont {
+    // 나중에 제플린으로 뽑을 예정...
+}
