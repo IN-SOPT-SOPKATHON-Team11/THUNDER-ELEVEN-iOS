@@ -210,10 +210,8 @@
 		5244DE2B292938100055A7BA /* MyGraMe */ = {
 			isa = PBXGroup;
 			children = (
-				C3A065DD292951FD00A5DCDF /* MyGraMeTableViewCell.swift */,
-				5244DE31292938890055A7BA /* MyGrameViewController.swift */,
-				C3A065DF2929674000A5DCDF /* MyGraMeModel.swift */,
-				C30A32A429297E67002153B0 /* MyGraMeTableViewHeaderView.swift */,
+				C30A32A7292989C9002153B0 /* ViewController */,
+				C30A32A6292989B0002153B0 /* View */,
 			);
 			path = MyGraMe;
 			sourceTree = "<group>";
@@ -294,6 +292,24 @@
 				5244DE3D2929393D0055A7BA /* MyProfileRouter.swift */,
 			);
 			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		C30A32A6292989B0002153B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C30A32A429297E67002153B0 /* MyGraMeTableViewHeaderView.swift */,
+				C3A065DD292951FD00A5DCDF /* MyGraMeTableViewCell.swift */,
+				C3A065DF2929674000A5DCDF /* MyGraMeModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C30A32A7292989C9002153B0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5244DE31292938890055A7BA /* MyGrameViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		DDA819BB29275E5900AFD33B = {
