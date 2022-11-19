@@ -18,10 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             window.overrideUserInterfaceStyle = UIUserInterfaceStyle.light
             
-            let rootVC = UserLogViewController()
-            let navigationController = UINavigationController(rootViewController: rootVC)
-            navigationController.navigationBar.isHidden = true
-            window.rootViewController = navigationController
+            let rootVC = LoginViewController()
+//            let navigationController = UINavigationController(rootViewController: rootVC)
+            window.rootViewController = rootVC
             window.makeKeyAndVisible()
             self.window = window
         }
