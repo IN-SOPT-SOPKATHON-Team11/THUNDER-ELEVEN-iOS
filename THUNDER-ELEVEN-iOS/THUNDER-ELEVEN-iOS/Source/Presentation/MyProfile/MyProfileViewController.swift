@@ -69,26 +69,20 @@ extension MyProfileViewController{
                                          firstAnimal: self.routerResponse?.firstImpression.animal ?? "사자111" ,
                                          secondTag: self.routerResponse?.currentImpression.tag ?? "낙관적인",
                                          secondAnimal: self.routerResponse?.currentImpression.animal ?? "곰")
-                        let num2 = Int.random(in: 0...9)
+                        let num2 = Int.random(in: 0...5)
                         switch num2 {
                         case 0:
                             self.firstImpressionImageView.image = Const.Image.bear_bus
                         case 1:
-                            self.firstImpressionImageView.image = Const.Image.bear_gray
-                        case 2:
                             self.firstImpressionImageView.image = Const.Image.bear_lab
-                        case 3:
+                        case 2:
                             self.firstImpressionImageView.image = Const.Image.bear_steve
-                        case 4:
+                        case 3:
                             self.firstImpressionImageView.image = Const.Image.lion_doctor
-                        case 5:
-                            self.firstImpressionImageView.image = Const.Image.bear_gray
-                        case 6:
+                        case 4:
                             self.firstImpressionImageView.image = Const.Image.lion_romance
-                        case 7:
+                        case 5:
                             self.firstImpressionImageView.image = Const.Image.rabbit_cute
-                        case 8:
-                            self.firstImpressionImageView.image = Const.Image.rabbit_gray
                         default:
                             return
                         }
