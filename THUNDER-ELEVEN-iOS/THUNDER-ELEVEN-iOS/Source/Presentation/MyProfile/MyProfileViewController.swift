@@ -9,21 +9,56 @@ import UIKit
 
 class MyProfileViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    private let whatImpressionLabel: UILabel = UILabel().then {
+        $0.backgroundColor = .red
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private let firstImpressionLabel: UILabel = UILabel().then {
+        $0.backgroundColor = .red
     }
-    */
-
+    private let firstImpressionImageView: UIImageView = UIImageView().then {
+        $0.backgroundColor = .red
+    }
+    
+    private let secondImpressionLabel: UILabel = UILabel().then {
+        $0.backgroundColor = .red
+    }
+    private let secondImpressionImageView: UIImageView = UIImageView().then {
+        $0.backgroundColor = .red
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+extension MyProfileViewController{
+    private func setUI(){
+        
+    }
+    private func setLayout(){
+        whatImpressionLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(40)
+        }
+        firstImpressionLabel.snp.makeConstraints { make in
+            make.top.equalTo(whatImpressionLabel.snp.bottom).offset(41)
+            make.centerX.equalToSuperview()
+        }
+        firstImpressionImageView.snp.makeConstraints { make in
+            make.top.equalTo(firstImpressionLabel.snp.bottom)
+            make.centerX.equalToSuperview()
+            make.width.height.equalTo(168)
+        }
+        
+        firstImpressionLabel.snp.makeConstraints { make in
+            make.top.equalTo(whatImpressionLabel.snp.bottom).offset(41)
+            make.centerX.equalToSuperview()
+        }
+        firstImpressionImageView.snp.makeConstraints { make in
+            make.top.equalTo(firstImpressionLabel.snp.bottom)
+            make.centerX.equalToSuperview()
+            make.width.height.equalTo(168)
+        }
+        
+    }
 }

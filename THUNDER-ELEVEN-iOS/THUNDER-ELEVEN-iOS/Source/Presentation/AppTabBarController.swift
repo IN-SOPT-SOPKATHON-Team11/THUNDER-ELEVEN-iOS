@@ -43,7 +43,7 @@ final class AppTabBarController: UITabBarController {
         let secondTab = makeTabVC(vc: BaseNavigationController(rootViewController: MyGrameViewController()), tabBarTitle: "second", tabBarImg: "iconTabChatUnfilled", tabBarSelectedImg: "iconTabChatFilled")
         secondTab.tabBarItem.tag = 1
         
-        let thirdTab = makeTabVC(vc: BaseNavigationController(rootViewController: ReviewViewController()), tabBarTitle: "third", tabBarImg: "iconTabSharpUnfilled", tabBarSelectedImg: "iconTabSharpFilled")
+        let thirdTab = makeTabVC(vc: BaseNavigationController(rootViewController: SelectUserViewController()), tabBarTitle: "third", tabBarImg: "iconTabSharpUnfilled", tabBarSelectedImg: "iconTabSharpFilled")
         thirdTab.tabBarItem.tag = 2
         
         let tabs = [firstTab, secondTab,thirdTab]
