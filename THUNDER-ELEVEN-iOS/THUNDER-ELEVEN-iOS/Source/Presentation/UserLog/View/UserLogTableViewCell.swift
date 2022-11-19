@@ -22,7 +22,7 @@ class UserLogTableViewCell: UITableViewCell, UITableViewRegisterable {
         $0.textColor = .gray06
     }
     
-    private let animalImageView: UIImageView = UIImageView().then {
+    public var animalImageView: UIImageView = UIImageView().then {
         $0.backgroundColor = .mainOrange
         $0.layer.cornerRadius = 32
     }
