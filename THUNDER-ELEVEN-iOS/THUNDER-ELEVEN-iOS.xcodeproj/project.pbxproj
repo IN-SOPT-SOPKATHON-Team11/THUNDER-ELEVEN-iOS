@@ -29,6 +29,8 @@
 		5244DE50292939D70055A7BA /* MyGraMeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE4F292939D70055A7BA /* MyGraMeResponse.swift */; };
 		5244DE52292939E10055A7BA /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE51292939E10055A7BA /* ReviewRequest.swift */; };
 		5244DE54292939EC0055A7BA /* ReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE53292939EC0055A7BA /* ReviewResponse.swift */; };
+		C3A065DE292951FD00A5DCDF /* MyGraMeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A065DD292951FD00A5DCDF /* MyGraMeTableViewCell.swift */; };
+		C3A065E02929674000A5DCDF /* MyGraMeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A065DF2929674000A5DCDF /* MyGraMeModel.swift */; };
 		5244DE56292945F90055A7BA /* (null) in Sources */ = {isa = PBXBuildFile; };
 		5244DE5829294F9E0055A7BA /* UserLogTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE5729294F9E0055A7BA /* UserLogTableViewHeaderView.swift */; };
 		DD9E1C3329293EF40042298F /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E1C3229293EF40042298F /* UIColor+.swift */; };
@@ -91,6 +93,8 @@
 		5244DE4F292939D70055A7BA /* MyGraMeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGraMeResponse.swift; sourceTree = "<group>"; };
 		5244DE51292939E10055A7BA /* ReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequest.swift; sourceTree = "<group>"; };
 		5244DE53292939EC0055A7BA /* ReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResponse.swift; sourceTree = "<group>"; };
+		C3A065DD292951FD00A5DCDF /* MyGraMeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGraMeTableViewCell.swift; sourceTree = "<group>"; };
+		C3A065DF2929674000A5DCDF /* MyGraMeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGraMeModel.swift; sourceTree = "<group>"; };
 		5244DE5729294F9E0055A7BA /* UserLogTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogTableViewHeaderView.swift; sourceTree = "<group>"; };
 		DD9E1C3229293EF40042298F /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		DD9E1C34292961460042298F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				5244DE31292938890055A7BA /* MyGrameViewController.swift */,
+				C3A065DD292951FD00A5DCDF /* MyGraMeTableViewCell.swift */,
+				C3A065DF2929674000A5DCDF /* MyGraMeModel.swift */,
 			);
 			path = MyGraMe;
 			sourceTree = "<group>";
@@ -578,6 +584,7 @@
 				DDA819F129275F5500AFD33B /* UIImageView+.swift in Sources */,
 				DD9E1C35292961460042298F /* UIView+.swift in Sources */,
 				DDA819ED29275F4200AFD33B /* Identifier.swift in Sources */,
+				C3A065E02929674000A5DCDF /* MyGraMeModel.swift in Sources */,
 				DDA819CA29275E5900AFD33B /* SceneDelegate.swift in Sources */,
 				5244DE54292939EC0055A7BA /* ReviewResponse.swift in Sources */,
 				5244DE262929375A0055A7BA /* UserLogResponse.swift in Sources */,
@@ -586,6 +593,7 @@
 				5244DE182929327A0055A7BA /* UITableView+.swift in Sources */,
 				E773E7F4292953C400C98A62 /* SelectUserViewController.swift in Sources */,
 				5244DE50292939D70055A7BA /* MyGraMeResponse.swift in Sources */,
+				C3A065DE292951FD00A5DCDF /* MyGraMeTableViewCell.swift in Sources */,
 				5244DE34292938930055A7BA /* LoginViewController.swift in Sources */,
 				5244DE3E2929393D0055A7BA /* MyProfileRouter.swift in Sources */,
 				DDA81A1A2927610E00AFD33B /* NetworkBase.swift in Sources */,
