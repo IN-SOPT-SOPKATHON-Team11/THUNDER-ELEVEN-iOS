@@ -84,7 +84,7 @@ extension UserLogTableViewCell{
 
 
 extension UILabel {
-    func setColor(to targetString: String, with color: UIColor) {
+    func setColor1(to targetString: String, with color: UIColor) {
           if let labelText = self.text, labelText.count > 0 {
               let attributedString = NSMutableAttributedString(string: labelText)
               attributedString.addAttribute(.foregroundColor,
