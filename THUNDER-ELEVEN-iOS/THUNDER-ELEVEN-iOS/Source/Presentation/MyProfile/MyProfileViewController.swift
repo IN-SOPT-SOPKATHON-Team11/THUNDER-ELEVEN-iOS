@@ -14,12 +14,7 @@ class MyProfileViewController: UIViewController {
     )
 
     private var routerResponse: UserInfo?
-//    private var userName: String
-//    private var firstImage: String
-//    private var firstAnimal: String
-//    private var secondImage: String
-//    private var secondAnimal: String
-    
+
     private let whatImpressionLabel: UILabel = UILabel().then {
         $0.font = .header1
     }
@@ -27,9 +22,8 @@ class MyProfileViewController: UIViewController {
     private let firstImpressionLabel: UILabel = UILabel().then {
         $0.font = .contents2Bold
     }
-    private let firstImpressionImageView: UIImageView = UIImageView().then {
-        $0.backgroundColor = .black
-    }
+    private let firstImpressionImageView: UIImageView = UIImageView()
+    
     private let firstImpressionAnimalLabel: UILabel = UILabel().then {
         $0.backgroundColor = .subYellow
         $0.textAlignment = .center
@@ -42,9 +36,8 @@ class MyProfileViewController: UIViewController {
     private let secondImpressionLabel: UILabel = UILabel().then {
         $0.font = .contents2Bold
     }
-    private let secondImpressionImageView: UIImageView = UIImageView().then {
-        $0.backgroundColor = .mainOrange
-    }
+    private let secondImpressionImageView: UIImageView = UIImageView()
+    
     private let secondImpressionAnimalLabel: UILabel = UILabel().then {
         $0.backgroundColor = .subYellow
         $0.textAlignment = .center
@@ -63,7 +56,7 @@ class MyProfileViewController: UIViewController {
 }
 extension MyProfileViewController{
     private func getProfile(){
-        userProvider.request(.getMyProfile) { response in
+        userProvider.request(.getMyProfile) { [self] response in
             switch response {
             case .success(let result):
                 let status = result.statusCode
@@ -76,7 +69,57 @@ extension MyProfileViewController{
                                          firstAnimal: self.routerResponse?.firstImpression.animal ?? "사자111" ,
                                          secondTag: self.routerResponse?.currentImpression.tag ?? "낙관적인",
                                          secondAnimal: self.routerResponse?.currentImpression.animal ?? "곰")
-                        print("2222")
+                        let num2 = Int.random(in: 0...9)
+                        switch num2 {
+                        case 0:
+                            self.firstImpressionImageView.image = Const.Image.bear_bus
+                        case 1:
+                            self.firstImpressionImageView.image = Const.Image.bear_gray
+                        case 2:
+                            self.firstImpressionImageView.image = Const.Image.bear_lab
+                        case 3:
+                            self.firstImpressionImageView.image = Const.Image.bear_steve
+                        case 4:
+                            self.firstImpressionImageView.image = Const.Image.lion_doctor
+                        case 5:
+                            self.firstImpressionImageView.image = Const.Image.bear_gray
+                        case 6:
+                            self.firstImpressionImageView.image = Const.Image.lion_romance
+                        case 7:
+                            self.firstImpressionImageView.image = Const.Image.rabbit_cute
+                        case 8:
+                            self.firstImpressionImageView.image = Const.Image.rabbit_gray
+                        default:
+                            return
+                        }
+                        let num1 = Int.random(in: 0...9)
+                        switch num1 {
+                        case 0:
+                            self.secondImpressionImageView.image = Const.Image.bear_bus
+                        case 1:
+                            self.secondImpressionImageView.image = Const.Image.bear_gray
+                        case 2:
+                            self.secondImpressionImageView.image = Const.Image.bear_lab
+                        case 3:
+                            self.secondImpressionImageView.image = Const.Image.bear_steve
+                        case 4:
+                            self.secondImpressionImageView.image = Const.Image.lion_doctor
+                        case 5:
+                            self.secondImpressionImageView.image = Const.Image.bear_gray
+                        case 6:
+                            self.secondImpressionImageView.image = Const.Image.lion_romance
+                        case 7:
+                            self.secondImpressionImageView.image = Const.Image.rabbit_cute
+                        case 8:
+                            self.secondImpressionImageView.image = Const.Image.rabbit_gray
+                        default:
+                            return
+                        }
+//                        if(self.routerResponse?.firstImpression.animal == "사자"){
+//                            firstImpressionImageView.image = Const.ima
+//                        }else if(self.routerResponse?.firstImpression.animal == "사자"){
+//
+//                        }
                     }
                     catch(let error){
                         print("실패!")
