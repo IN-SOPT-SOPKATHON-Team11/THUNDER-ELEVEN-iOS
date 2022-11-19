@@ -50,8 +50,11 @@ extension UserLogViewController {
                 if status >= 200 && status<300{
                     do{
                         self.userLogs = try result.map(UsersLogResponseDto.self).data
+                        print(self.userLogs)
+                        self.userLogTableView.reloadData()
                     }
                     catch(let error){
+                        print("실패!")
                         print(error.localizedDescription)
                     }
                 }
@@ -83,7 +86,7 @@ extension UserLogViewController {
 extension UserLogViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        return (userLogs?.logs.count) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
