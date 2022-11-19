@@ -6,9 +6,20 @@
 //
 
 import UIKit
+import Moya
 
 class MyProfileViewController: UIViewController {
+    private let userProvider = MoyaProvider<MyProfileRouter>(
+        plugins: [ NetworkLoggerPlugin() ]
+    )
 
+    private var routerResponse: UserInfo?
+//    private var userName: String
+//    private var firstImage: String
+//    private var firstAnimal: String
+//    private var secondImage: String
+//    private var secondAnimal: String
+    
     private let whatImpressionLabel: UILabel = UILabel().then {
         $0.font = .header1
     }
@@ -47,17 +58,46 @@ class MyProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
-        setDataBind()
+        getProfile()
     }
 }
 extension MyProfileViewController{
-    private func setDataBind(){
-        whatImpressionLabel.text = "현우님은 어떤 인상일까요?"
-        whatImpressionLabel.setColor(to: "현우", with: .mainOrange)
+    private func getProfile(){
+        userProvider.request(.getMyProfile) { response in
+            switch response {
+            case .success(let result):
+                let status = result.statusCode
+                if status >= 200 && status<300{
+                    do{
+                        self.routerResponse = try result.map(MyProfileResponse.self).data
+                        print(self.routerResponse)
+                        self.setDataBind(self.routerResponse?.user.nickname ?? "현우",
+                                         firstTag: self.routerResponse?.firstImpression.tag ?? "사나운",
+                                         firstAnimal: self.routerResponse?.firstImpression.animal ?? "사자111" ,
+                                         secondTag: self.routerResponse?.currentImpression.tag ?? "낙관적인",
+                                         secondAnimal: self.routerResponse?.currentImpression.animal ?? "곰")
+                        print("2222")
+                    }
+                    catch(let error){
+                        print("실패!")
+                        print(error.localizedDescription)
+                    }
+                }
+                else if status >= 400{
+                    print("이상한 요청 보내지 마세요;;")
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    private func setDataBind(_ name: String, firstTag: String, firstAnimal: String, secondTag: String, secondAnimal: String){
+        whatImpressionLabel.text = "\(name)님은 어떤 인상일까요?"
+        whatImpressionLabel.setColor(to: name, with: .mainOrange)
         firstImpressionLabel.text = "첫인상"
         secondImpressionLabel.text = "현인상"
-        firstImpressionAnimalLabel.text = "사나운 사자"
-        secondImpressionAnimalLabel.text = "낙관적인 곰"
+        firstImpressionAnimalLabel.text = "\(firstTag) \(firstAnimal)"
+        secondImpressionAnimalLabel.text = "\(secondTag) \(secondAnimal)"
     }
     private func setUI(){
         
