@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct LoginResponse: Codable {
+    let status: Int
+    let message: String
+    let data: Login
+}
+
+// MARK: - DataClass
+struct Login: Codable {
+    let accessToken: String
+}

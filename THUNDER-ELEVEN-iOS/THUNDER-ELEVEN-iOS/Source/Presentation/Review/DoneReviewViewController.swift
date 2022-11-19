@@ -1,13 +1,15 @@
 //
-//  ReviewViewController.swift
+//  DoneReviewViewController.swift
 //  THUNDER-ELEVEN-iOS
 //
-//  Created by Mac Book Pro on 2022/11/20.
+//  Created by 김담인 on 2022/11/20.
 //
 
 import UIKit
+import SnapKit
+import Then
 
-class ReviewViewController: UIViewController {
+class DoneReviewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

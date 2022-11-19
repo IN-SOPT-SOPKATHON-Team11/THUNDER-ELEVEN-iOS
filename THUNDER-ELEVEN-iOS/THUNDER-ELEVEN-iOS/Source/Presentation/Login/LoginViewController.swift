@@ -10,6 +10,7 @@ import SwiftUI
 
 import SnapKit
 import Then
+import Moya
 
 class LoginViewController: UIViewController {
     
@@ -54,6 +55,7 @@ class LoginViewController: UIViewController {
         button.layer.cornerRadius = 5
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .header3
+        button.addTarget(self, action: #selector(submitButtonDidTap), for: .touchUpInside)
         return button
     }()
     
@@ -66,6 +68,7 @@ class LoginViewController: UIViewController {
     }()
     
     // MARK: - Property
+    let loginProvider = MoyaProvider<LoginRouter>(plugins: [NetworkLoggerPlugin()])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +78,22 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: - Function
+    
+    private func postLogin(loginRequest: LoginRequest) {
+        let loginRequest: LoginRequest = loginRequest
+        loginProvider.request(.postLogin(param: loginRequest)) { response in
+            switch response {
+            case .success(let data):
+                let status = data.statusCode
+                if status == 200 {
+                    guard let response = data as? LoginResponse else { return }
+                    UserDefaults.standard.set(response.data.accessToken, forKey: "token")
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
     
     private func setUI() {
         view.backgroundColor = .white
@@ -118,39 +137,47 @@ class LoginViewController: UIViewController {
             make.centerX.equalTo(view.safeAreaLayoutGuide)
         }
     }
-}
-
-struct UIViewPreview<View: UIView>: UIViewRepresentable {
-    let view: View
     
-    init(_ builder: @escaping () -> View) {
-        view = builder()
-    }
-    
-    func makeUIView(context: Context) -> UIView {
-        return view
-    }
-    
-    func updateUIView(_ view: UIView, context: Context) {
-        view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        view.setContentHuggingPriority(.defaultHigh, for: .vertical)
+    // MARK: - Objc Function
+    @objc private func submitButtonDidTap() {
+        guard let id = userIDTextField.text else { return }
+        guard let pw = passwordTextField.text else { return }
+        let request = LoginRequest(nickname: id, password: pw)
+        postLogin(loginRequest: request)
     }
 }
-
-struct LoginViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct Container: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> UIViewController {
-            let loginViewController = LoginViewController()
-            return UINavigationController(rootViewController: loginViewController)
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-            typealias UIViewControllerType = UIViewController
-        }
-    }
-}
+//
+//struct UIViewPreview<View: UIView>: UIViewRepresentable {
+//    let view: View
+//    
+//    init(_ builder: @escaping () -> View) {
+//        view = builder()
+//    }
+//    
+//    func makeUIView(context: Context) -> UIView {
+//        return view
+//    }
+//    
+//    func updateUIView(_ view: UIView, context: Context) {
+//        view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+//        view.setContentHuggingPriority(.defaultHigh, for: .vertical)
+//    }
+//}
+//
+//struct LoginViewController_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Container().edgesIgnoringSafeArea(.all)
+//    }
+//    
+//    struct Container: UIViewControllerRepresentable {
+//        func makeUIViewController(context: Context) -> UIViewController {
+//            let loginViewController = LoginViewController()
+//            return UINavigationController(rootViewController: loginViewController)
+//        }
+//        
+//        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+//            typealias UIViewControllerType = UIViewController
+//        }
+//    }
+//}
 
