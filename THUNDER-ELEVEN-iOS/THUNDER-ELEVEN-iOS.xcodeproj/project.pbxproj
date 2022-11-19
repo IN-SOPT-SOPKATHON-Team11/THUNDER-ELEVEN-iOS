@@ -15,7 +15,6 @@
 		5244DE24292937510055A7BA /* UserLogRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE23292937510055A7BA /* UserLogRequest.swift */; };
 		5244DE262929375A0055A7BA /* UserLogResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE252929375A0055A7BA /* UserLogResponse.swift */; };
 		5244DE29292938050055A7BA /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE28292938050055A7BA /* MyProfileViewController.swift */; };
-		5244DE30292938810055A7BA /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE2F292938810055A7BA /* ReviewViewController.swift */; };
 		5244DE32292938890055A7BA /* MyGrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE31292938890055A7BA /* MyGrameViewController.swift */; };
 		5244DE34292938930055A7BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE33292938930055A7BA /* LoginViewController.swift */; };
 		5244DE3E2929393D0055A7BA /* MyProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE3D2929393D0055A7BA /* MyProfileRouter.swift */; };
@@ -61,6 +60,10 @@
 		DDA81A2B292762F300AFD33B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DDA81A2A292762F300AFD33B /* Then */; };
 		DDA81A2E292762FF00AFD33B /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = DDA81A2D292762FF00AFD33B /* SwiftyColor */; };
 		DDA81A312927633800AFD33B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DDA81A302927633800AFD33B /* Kingfisher */; };
+		E773E7F4292953C400C98A62 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773E7F3292953C400C98A62 /* SelectUserViewController.swift */; };
+		E773E7F629295AFD00C98A62 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773E7F529295AFD00C98A62 /* UITextField+.swift */; };
+		E773E7F829295E4200C98A62 /* ReviewWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773E7F729295E4200C98A62 /* ReviewWriteViewController.swift */; };
+		E773E7FA29295FB500C98A62 /* DoneReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773E7F929295FB500C98A62 /* DoneReviewViewController.swift */; };
 		E79B6DF729276C6D00789BBB /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B6DF629276C6D00789BBB /* AppTabBarController.swift */; };
 		E79B6DF929276D2300789BBB /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B6DF829276D2300789BBB /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
@@ -74,7 +77,6 @@
 		5244DE23292937510055A7BA /* UserLogRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogRequest.swift; sourceTree = "<group>"; };
 		5244DE252929375A0055A7BA /* UserLogResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogResponse.swift; sourceTree = "<group>"; };
 		5244DE28292938050055A7BA /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
-		5244DE2F292938810055A7BA /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		5244DE31292938890055A7BA /* MyGrameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGrameViewController.swift; sourceTree = "<group>"; };
 		5244DE33292938930055A7BA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5244DE3D2929393D0055A7BA /* MyProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileRouter.swift; sourceTree = "<group>"; };
@@ -116,6 +118,10 @@
 		DDA81A1D292761BD00AFD33B /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		DDA81A1F292761C900AFD33B /* StatusHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusHandler.swift; sourceTree = "<group>"; };
 		DDA81A21292761D900AFD33B /* StatusCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCase.swift; sourceTree = "<group>"; };
+		E773E7F3292953C400C98A62 /* SelectUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
+		E773E7F529295AFD00C98A62 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		E773E7F729295E4200C98A62 /* ReviewWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWriteViewController.swift; sourceTree = "<group>"; };
+		E773E7F929295FB500C98A62 /* DoneReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneReviewViewController.swift; sourceTree = "<group>"; };
 		E79B6DF629276C6D00789BBB /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
 		E79B6DF829276D2300789BBB /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,7 +212,9 @@
 		5244DE2D2929382B0055A7BA /* Review */ = {
 			isa = PBXGroup;
 			children = (
-				5244DE2F292938810055A7BA /* ReviewViewController.swift */,
+				E773E7F3292953C400C98A62 /* SelectUserViewController.swift */,
+				E773E7F729295E4200C98A62 /* ReviewWriteViewController.swift */,
+				E773E7F929295FB500C98A62 /* DoneReviewViewController.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -403,6 +411,7 @@
 				5244DE19292932940055A7BA /* NSObject+.swift */,
 				DD9E1C3229293EF40042298F /* UIColor+.swift */,
 				DD9E1C34292961460042298F /* UIView+.swift */,
+				E773E7F529295AFD00C98A62 /* UITextField+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -543,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E773E7FA29295FB500C98A62 /* DoneReviewViewController.swift in Sources */,
 				5244DE42292939510055A7BA /* MyGraMeRouter.swift in Sources */,
 				E79B6DF929276D2300789BBB /* BaseNavigationController.swift in Sources */,
 				DDA81A20292761C900AFD33B /* StatusHandler.swift in Sources */,
@@ -574,6 +584,7 @@
 				5244DE44292939570055A7BA /* ReviewRouter.swift in Sources */,
 				5244DE4E292939D00055A7BA /* MyGraMeRequest.swift in Sources */,
 				5244DE182929327A0055A7BA /* UITableView+.swift in Sources */,
+				E773E7F4292953C400C98A62 /* SelectUserViewController.swift in Sources */,
 				5244DE50292939D70055A7BA /* MyGraMeResponse.swift in Sources */,
 				5244DE34292938930055A7BA /* LoginViewController.swift in Sources */,
 				5244DE3E2929393D0055A7BA /* MyProfileRouter.swift in Sources */,
@@ -583,10 +594,12 @@
 				5244DE56292945F90055A7BA /* (null) in Sources */,
 				E79B6DF729276C6D00789BBB /* AppTabBarController.swift in Sources */,
 				5244DE4C292939C30055A7BA /* MyProfileResponse.swift in Sources */,
+				E773E7F829295E4200C98A62 /* ReviewWriteViewController.swift in Sources */,
 				5244DE1A292932940055A7BA /* NSObject+.swift in Sources */,
 				5244DE24292937510055A7BA /* UserLogRequest.swift in Sources */,
 				DDA819F329275F5A00AFD33B /* UIImage+.swift in Sources */,
 				DDA81A1E292761BD00AFD33B /* NetworkConstant.swift in Sources */,
+				E773E7F629295AFD00C98A62 /* UITextField+.swift in Sources */,
 				DDA819EB29275F3A00AFD33B /* ViewController.swift in Sources */,
 				DDA819E929275F3200AFD33B /* Const.swift in Sources */,
 				DDA81A16292760FC00AFD33B /* URLConstant.swift in Sources */,
