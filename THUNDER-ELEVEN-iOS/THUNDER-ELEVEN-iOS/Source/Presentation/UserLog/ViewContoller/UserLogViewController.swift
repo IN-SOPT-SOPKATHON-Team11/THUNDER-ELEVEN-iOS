@@ -16,7 +16,7 @@ import Moya
 //}
 class UserLogViewController: UIViewController {
     
-    let image: [UIImage?] = [Const.Image.bear_bus, Const.Image.bear_gray, Const.Image.bear_lab, Const.Image.bear_steve, Const.Image.lion_doctor, Const.Image.lion_gray, Const.Image.lion_romance, Const.Image.rabbit_cute, Const.Image.rabbit_gray
+    let image: [UIImage?] = [Const.Image.bear_bus, Const.Image.bear_lab, Const.Image.bear_steve, Const.Image.lion_doctor, Const.Image.lion_romance, Const.Image.rabbit_cute
     ]
     private var userID: String = ""
     
@@ -98,7 +98,7 @@ extension UserLogViewController: UITableViewDelegate, UITableViewDataSource{
         let comment: String = userLogs?.logs[indexPath.row].comment ?? "ㅇㅇ이랬는데 ㅇㅇㅇ이랬어요"
         cell.setDataBind(animalString: tag+animal, date: "2022/11/18", animalSeq: 1, comment: comment)
         cell.selectionStyle = .none
-        let num = Int.random(in: 0...9)
+        let num = Int.random(in: 0...5)
         cell.animalImageView.image = self.image[num]
         
         return cell
