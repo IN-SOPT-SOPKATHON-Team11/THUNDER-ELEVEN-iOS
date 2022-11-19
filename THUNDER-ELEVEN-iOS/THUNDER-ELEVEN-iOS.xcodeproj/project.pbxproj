@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5244DE16292931C90055A7BA /* UserLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE15292931C90055A7BA /* UserLogViewController.swift */; };
+		5244DE182929327A0055A7BA /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE172929327A0055A7BA /* UITableView+.swift */; };
+		5244DE1A292932940055A7BA /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE19292932940055A7BA /* NSObject+.swift */; };
+		5244DE1E292934010055A7BA /* UserLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE1D292934010055A7BA /* UserLogTableViewCell.swift */; };
+		5244DE21292937210055A7BA /* UserLogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE20292937210055A7BA /* UserLogRouter.swift */; };
+		5244DE24292937510055A7BA /* UserLogRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE23292937510055A7BA /* UserLogRequest.swift */; };
+		5244DE262929375A0055A7BA /* UserLogResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244DE252929375A0055A7BA /* UserLogResponse.swift */; };
 		DDA819C829275E5900AFD33B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA819C729275E5900AFD33B /* AppDelegate.swift */; };
 		DDA819CA29275E5900AFD33B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA819C929275E5900AFD33B /* SceneDelegate.swift */; };
 		DDA819D129275E5A00AFD33B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA819D029275E5A00AFD33B /* Assets.xcassets */; };
@@ -44,6 +51,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5244DE15292931C90055A7BA /* UserLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogViewController.swift; sourceTree = "<group>"; };
+		5244DE172929327A0055A7BA /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		5244DE19292932940055A7BA /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
+		5244DE1D292934010055A7BA /* UserLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogTableViewCell.swift; sourceTree = "<group>"; };
+		5244DE20292937210055A7BA /* UserLogRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogRouter.swift; sourceTree = "<group>"; };
+		5244DE23292937510055A7BA /* UserLogRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogRequest.swift; sourceTree = "<group>"; };
+		5244DE252929375A0055A7BA /* UserLogResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogResponse.swift; sourceTree = "<group>"; };
 		DDA819C429275E5900AFD33B /* THUNDER-ELEVEN-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "THUNDER-ELEVEN-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA819C729275E5900AFD33B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDA819C929275E5900AFD33B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +107,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5244DE14292931B20055A7BA /* UserLog */ = {
+			isa = PBXGroup;
+			children = (
+				5244DE1C292933D40055A7BA /* View */,
+				5244DE1B292933A00055A7BA /* ViewContoller */,
+			);
+			path = UserLog;
+			sourceTree = "<group>";
+		};
+		5244DE1B292933A00055A7BA /* ViewContoller */ = {
+			isa = PBXGroup;
+			children = (
+				5244DE15292931C90055A7BA /* UserLogViewController.swift */,
+			);
+			path = ViewContoller;
+			sourceTree = "<group>";
+		};
+		5244DE1C292933D40055A7BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5244DE1D292934010055A7BA /* UserLogTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5244DE1F292936EA0055A7BA /* UserLog */ = {
+			isa = PBXGroup;
+			children = (
+				5244DE20292937210055A7BA /* UserLogRouter.swift */,
+			);
+			path = UserLog;
+			sourceTree = "<group>";
+		};
+		5244DE22292937300055A7BA /* UserLog */ = {
+			isa = PBXGroup;
+			children = (
+				5244DE23292937510055A7BA /* UserLogRequest.swift */,
+				5244DE252929375A0055A7BA /* UserLogResponse.swift */,
+			);
+			path = UserLog;
+			sourceTree = "<group>";
+		};
 		DDA819BB29275E5900AFD33B = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +233,7 @@
 		DDA819E329275EB600AFD33B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5244DE14292931B20055A7BA /* UserLog */,
 				E79B6DF629276C6D00789BBB /* AppTabBarController.swift */,
 				DDA819F829275F7300AFD33B /* Main */,
 			);
@@ -209,6 +266,8 @@
 				DDA819F429275F6400AFD33B /* UILabel+.swift */,
 				DDA819F629275F6D00AFD33B /* UIFont+.swift */,
 				E79B6DF829276D2300789BBB /* BaseNavigationController.swift */,
+				5244DE172929327A0055A7BA /* UITableView+.swift */,
+				5244DE19292932940055A7BA /* NSObject+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,6 +310,7 @@
 		DDA819FC29275F8700AFD33B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5244DE1F292936EA0055A7BA /* UserLog */,
 				DDA81A0B292760B900AFD33B /* Main */,
 			);
 			path = Network;
@@ -259,6 +319,7 @@
 		DDA819FD29275F8B00AFD33B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5244DE22292937300055A7BA /* UserLog */,
 				DDA81A062927609700AFD33B /* Main */,
 			);
 			path = Data;
@@ -370,6 +431,7 @@
 				E79B6DF929276D2300789BBB /* BaseNavigationController.swift in Sources */,
 				DDA81A20292761C900AFD33B /* StatusHandler.swift in Sources */,
 				DDA81A0A292760B600AFD33B /* MainResponse.swift in Sources */,
+				5244DE1E292934010055A7BA /* UserLogTableViewCell.swift in Sources */,
 				DDA81A1C292761B500AFD33B /* GeneralResponse.swift in Sources */,
 				DDA81A0D292760C400AFD33B /* MainRouter.swift in Sources */,
 				DDA819F529275F6400AFD33B /* UILabel+.swift in Sources */,
@@ -378,15 +440,21 @@
 				DDA81A08292760A900AFD33B /* MainRequest.swift in Sources */,
 				DDA819C829275E5900AFD33B /* AppDelegate.swift in Sources */,
 				DDA819F729275F6D00AFD33B /* UIFont+.swift in Sources */,
+				5244DE21292937210055A7BA /* UserLogRouter.swift in Sources */,
 				DDA81A12292760EA00AFD33B /* NetworkResult.swift in Sources */,
 				DDA81A22292761D900AFD33B /* StatusCase.swift in Sources */,
 				DDA819EF29275F4900AFD33B /* Image.swift in Sources */,
 				DDA819F129275F5500AFD33B /* UIImageView+.swift in Sources */,
 				DDA819ED29275F4200AFD33B /* Identifier.swift in Sources */,
 				DDA819CA29275E5900AFD33B /* SceneDelegate.swift in Sources */,
+				5244DE262929375A0055A7BA /* UserLogResponse.swift in Sources */,
+				5244DE182929327A0055A7BA /* UITableView+.swift in Sources */,
 				DDA81A1A2927610E00AFD33B /* NetworkBase.swift in Sources */,
 				DDA81A14292760F500AFD33B /* BaseTargetType.swift in Sources */,
+				5244DE16292931C90055A7BA /* UserLogViewController.swift in Sources */,
 				E79B6DF729276C6D00789BBB /* AppTabBarController.swift in Sources */,
+				5244DE1A292932940055A7BA /* NSObject+.swift in Sources */,
+				5244DE24292937510055A7BA /* UserLogRequest.swift in Sources */,
 				DDA81A0F292760CB00AFD33B /* MainService.swift in Sources */,
 				DDA819F329275F5A00AFD33B /* UIImage+.swift in Sources */,
 				DDA81A1E292761BD00AFD33B /* NetworkConstant.swift in Sources */,
