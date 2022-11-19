@@ -37,22 +37,16 @@ final class AppTabBarController: UITabBarController {
     /// 탭뷰컨 쓸때 MainViewController 부분 수정해서 쓰면 됨! (제목, 아이콘도)
     private func setTabBar() {
         self.delegate = self
-        let firstTab = makeTabVC(vc: BaseNavigationController(rootViewController: MainViewController()), tabBarTitle: "first", tabBarImg:"iconTabPersonUnfilled", tabBarSelectedImg: "iconTabPersonFilled")
+        let firstTab = makeTabVC(vc: BaseNavigationController(rootViewController: MyProfileViewController()), tabBarTitle: "first", tabBarImg:"iconTabPersonUnfilled", tabBarSelectedImg: "iconTabPersonFilled")
         firstTab.tabBarItem.tag = 0
         
-        let secondTab = makeTabVC(vc: BaseNavigationController(rootViewController: MainViewController()), tabBarTitle: "second", tabBarImg: "iconTabChatUnfilled", tabBarSelectedImg: "iconTabChatFilled")
+        let secondTab = makeTabVC(vc: BaseNavigationController(rootViewController: MyGrameViewController()), tabBarTitle: "second", tabBarImg: "iconTabChatUnfilled", tabBarSelectedImg: "iconTabChatFilled")
         secondTab.tabBarItem.tag = 1
         
-        let thirdTab = makeTabVC(vc: BaseNavigationController(rootViewController: MainViewController()), tabBarTitle: "third", tabBarImg: "iconTabSharpUnfilled", tabBarSelectedImg: "iconTabSharpFilled")
+        let thirdTab = makeTabVC(vc: BaseNavigationController(rootViewController: ReviewViewController()), tabBarTitle: "third", tabBarImg: "iconTabSharpUnfilled", tabBarSelectedImg: "iconTabSharpFilled")
         thirdTab.tabBarItem.tag = 2
         
-        let fourthTab = makeTabVC(vc: BaseNavigationController(rootViewController: MainViewController()), tabBarTitle: "fourth", tabBarImg: "iconTabShopUnfilled", tabBarSelectedImg: "iconTabShopFilled")
-        fourthTab.tabBarItem.tag = 3
-        
-        let fifthTab = makeTabVC(vc: BaseNavigationController(rootViewController: MainViewController()), tabBarTitle: "fifth", tabBarImg: "iconTabMoreUnfilled", tabBarSelectedImg: "iconTabMoreFilled")
-        fifthTab.tabBarItem.tag = 4
-        
-        let tabs = [firstTab, secondTab,thirdTab, fourthTab, fifthTab]
+        let tabs = [firstTab, secondTab,thirdTab]
         self.setViewControllers(tabs, animated: false)
     }
     
