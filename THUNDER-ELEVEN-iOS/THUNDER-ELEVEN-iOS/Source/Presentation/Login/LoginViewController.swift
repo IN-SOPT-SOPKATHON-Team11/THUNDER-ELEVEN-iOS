@@ -119,38 +119,38 @@ class LoginViewController: UIViewController {
         }
     }
 }
-
-struct UIViewPreview<View: UIView>: UIViewRepresentable {
-    let view: View
-    
-    init(_ builder: @escaping () -> View) {
-        view = builder()
-    }
-    
-    func makeUIView(context: Context) -> UIView {
-        return view
-    }
-    
-    func updateUIView(_ view: UIView, context: Context) {
-        view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        view.setContentHuggingPriority(.defaultHigh, for: .vertical)
-    }
-}
-
-struct LoginViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct Container: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> UIViewController {
-            let loginViewController = LoginViewController()
-            return UINavigationController(rootViewController: loginViewController)
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-            typealias UIViewControllerType = UIViewController
-        }
-    }
-}
+//
+//struct UIViewPreview<View: UIView>: UIViewRepresentable {
+//    let view: View
+//    
+//    init(_ builder: @escaping () -> View) {
+//        view = builder()
+//    }
+//    
+//    func makeUIView(context: Context) -> UIView {
+//        return view
+//    }
+//    
+//    func updateUIView(_ view: UIView, context: Context) {
+//        view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+//        view.setContentHuggingPriority(.defaultHigh, for: .vertical)
+//    }
+//}
+//
+//struct LoginViewController_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Container().edgesIgnoringSafeArea(.all)
+//    }
+//    
+//    struct Container: UIViewControllerRepresentable {
+//        func makeUIViewController(context: Context) -> UIViewController {
+//            let loginViewController = LoginViewController()
+//            return UINavigationController(rootViewController: loginViewController)
+//        }
+//        
+//        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+//            typealias UIViewControllerType = UIViewController
+//        }
+//    }
+//}
 
