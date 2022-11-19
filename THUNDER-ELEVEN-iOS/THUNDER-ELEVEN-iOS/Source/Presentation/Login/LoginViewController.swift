@@ -94,7 +94,7 @@ class LoginViewController: UIViewController {
                     catch(let error) {
                         print(error.localizedDescription)
                     }
-                    UIApplication.shared.windows.first?.rootViewController = MyProfileViewController()
+                    UIApplication.shared.windows.first?.rootViewController = AppTabBarController()
 //                    let mainViewController = MyProfileViewController()
 //                    let navigationController = UINavigationController(rootViewController: mainViewController)
 //                    let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate

@@ -53,8 +53,8 @@ extension UserLogTableViewCell{
         dateLabel.text = date
         animalImageView.image = UIImage(named: "\(animalSeq)")
         commentLabel.text = comment
-        impressionLabel.setColor(to: "첫인상", with: .mainOrange)
-        impressionLabel.setColor(to: "현인상", with: .mainOrange)
+        impressionLabel.setColorD(to: "첫인상", with: .mainOrange)
+        impressionLabel.setColorD(to: "현인상", with: .mainOrange)
     }
     private func setLayout(){
         backgroundColor = .clear

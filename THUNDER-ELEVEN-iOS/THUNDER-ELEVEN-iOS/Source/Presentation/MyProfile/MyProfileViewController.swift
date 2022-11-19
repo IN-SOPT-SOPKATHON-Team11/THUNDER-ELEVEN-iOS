@@ -130,7 +130,8 @@ extension MyProfileViewController{
     }
     private func setDataBind(_ name: String, firstTag: String, firstAnimal: String, secondTag: String, secondAnimal: String){
         whatImpressionLabel.text = "\(name)님은 어떤 인상일까요?"
-        whatImpressionLabel.setColor(to: name, with: .mainOrange)
+//        whatImpressionLabel.setColor(to: name, with: .mainOrange)
+        whatImpressionLabel.setColorD(to: name, with: .mainOrange)
         firstImpressionLabel.text = "첫인상"
         secondImpressionLabel.text = "현인상"
         firstImpressionAnimalLabel.text = "\(firstTag) \(firstAnimal)"
