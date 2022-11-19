@@ -21,5 +21,9 @@ extension Const {
         static let lion_romance = UIImage(named: "img_lion_romance")
         static let rabbit_cute = UIImage(named: "img_rabbit_cute")
         static let rabbit_gray = UIImage(named: "img_rabbit_gray")
+        static let img_success = UIImage(named: "img_success")
+        static let img_helpBalloon = UIImage(named: "img_helpBalloon")
+        static let button_copy = UIImage(named: "button_copy")
+        
     }
 }
