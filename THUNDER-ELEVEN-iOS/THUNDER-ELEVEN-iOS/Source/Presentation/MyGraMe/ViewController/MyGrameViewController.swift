@@ -75,9 +75,9 @@ final class MyGrameViewController: UIViewController, UITableViewDelegate, UITabl
     } ()
     
     var myGraMeList: [MyGraMeModel] = [
-        MyGraMeModel(name: "채은", date: "2022년 11월 22일", first: "행복한 토끼", firstImage: "", now: "자신감 있는 사자", nowImage: "🦁"),
-        MyGraMeModel(name: "채은", date: "2022년 11월 22일", first: "행복한 토끼", firstImage: "🐰", now: "자신감 있는 사자", nowImage: "🦁"),
-        MyGraMeModel(name: "채은", date: "2022년 11월 22일", first: "행복한 토끼", firstImage: "🐰", now: "자신감 있는 사자", nowImage: "🦁")
+        MyGraMeModel(name: "송현", date: "2022/11/22", first: "연구원 곰", firstImage: "", now: "과제 버스기사 곰", nowImage: ""),
+        MyGraMeModel(name: "안누", date: "2022/11/22", first: "스티브 잡스 곰", firstImage: "", now: "낭만 시인 사자", nowImage: ""),
+        MyGraMeModel(name: "정연", date: "2022/11/22", first: "사나운 사자", firstImage: "", now: "귀여운 토끼", nowImage: "")
     ]
 
     override func viewDidLoad() {
@@ -104,6 +104,8 @@ extension MyGrameViewController {
             forCellReuseIdentifier: MyGraMeTableViewCell.identifier)
         myGraMeTableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: "customHeader")
     }
+    
+    
     
 }
 

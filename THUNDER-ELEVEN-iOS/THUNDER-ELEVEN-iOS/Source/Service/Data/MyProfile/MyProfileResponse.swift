@@ -25,11 +25,11 @@ struct MyProfileResponse: Codable {
 // MARK: - DataClass
 struct UserInfo: Codable {
     let user: Name
-    let firstImpression, currentImpression: TImpression
+    let firstImpression, currentImpression: CImpression
 }
 
 // MARK: - TImpression
-struct TImpression: Codable {
+struct CImpression: Codable {
     let tag, animal: String
 }
 
