@@ -86,8 +86,21 @@ class LoginViewController: UIViewController {
             case .success(let data):
                 let status = data.statusCode
                 if status == 200 {
-                    guard let response = data as? LoginResponse else { return }
-                    UserDefaults.standard.set(response.data.accessToken, forKey: "token")
+                    print("⚡️",response)
+                    do {
+                        let response = try data.map(Login.self)
+                        UserDefaults.standard.set(response.accessToken, forKey: "token")
+                    }
+                    catch(let error) {
+                        print(error.localizedDescription)
+                    }
+                    UIApplication.shared.windows.first?.rootViewController = MyProfileViewController()
+//                    let mainViewController = MyProfileViewController()
+//                    let navigationController = UINavigationController(rootViewController: mainViewController)
+//                    let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+//                    guard let delegate = sceneDelegate else { return }
+//                    delegate.window?.rootViewController = navigationController
+//                    /keyWindow?.replaceRootViewController(MyProfileViewController, animated: true, completion: nil)
                 }
             case .failure(let error):
                 print(error.localizedDescription)
