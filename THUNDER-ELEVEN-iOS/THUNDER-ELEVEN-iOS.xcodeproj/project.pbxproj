@@ -67,6 +67,9 @@
 		E773E7F629295AFD00C98A62 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773E7F529295AFD00C98A62 /* UITextField+.swift */; };
 		E773E7F829295E4200C98A62 /* ReviewWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773E7F729295E4200C98A62 /* ReviewWriteViewController.swift */; };
 		E773E7FA29295FB500C98A62 /* DoneReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773E7F929295FB500C98A62 /* DoneReviewViewController.swift */; };
+		E773E7FC292985C500C98A62 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773E7FB292985C500C98A62 /* UIStackView+.swift */; };
+		E773E7FE29298C8A00C98A62 /* WriteTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773E7FD29298C8A00C98A62 /* WriteTagCollectionViewCell.swift */; };
+		E773E80029298F2200C98A62 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773E7FF29298F2200C98A62 /* LeftAlignedCollectionViewFlowLayout.swift */; };
 		E79B6DF729276C6D00789BBB /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B6DF629276C6D00789BBB /* AppTabBarController.swift */; };
 		E79B6DF929276D2300789BBB /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B6DF829276D2300789BBB /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
@@ -128,6 +131,9 @@
 		E773E7F529295AFD00C98A62 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		E773E7F729295E4200C98A62 /* ReviewWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWriteViewController.swift; sourceTree = "<group>"; };
 		E773E7F929295FB500C98A62 /* DoneReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneReviewViewController.swift; sourceTree = "<group>"; };
+		E773E7FB292985C500C98A62 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		E773E7FD29298C8A00C98A62 /* WriteTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteTagCollectionViewCell.swift; sourceTree = "<group>"; };
+		E773E7FF29298F2200C98A62 /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		E79B6DF629276C6D00789BBB /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
 		E79B6DF829276D2300789BBB /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +228,8 @@
 				E773E7F3292953C400C98A62 /* SelectUserViewController.swift */,
 				E773E7F729295E4200C98A62 /* ReviewWriteViewController.swift */,
 				E773E7F929295FB500C98A62 /* DoneReviewViewController.swift */,
+				E773E7FD29298C8A00C98A62 /* WriteTagCollectionViewCell.swift */,
+				E773E7FF29298F2200C98A62 /* LeftAlignedCollectionViewFlowLayout.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -437,6 +445,7 @@
 				DD9E1C3229293EF40042298F /* UIColor+.swift */,
 				DD9E1C34292961460042298F /* UIView+.swift */,
 				E773E7F529295AFD00C98A62 /* UITextField+.swift */,
+				E773E7FB292985C500C98A62 /* UIStackView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -587,6 +596,7 @@
 				DDA81A1C292761B500AFD33B /* GeneralResponse.swift in Sources */,
 				5244DE48292939B10055A7BA /* LoginResponse.swift in Sources */,
 				5244DE46292939A50055A7BA /* LoginRequest.swift in Sources */,
+				E773E7FE29298C8A00C98A62 /* WriteTagCollectionViewCell.swift in Sources */,
 				5244DE32292938890055A7BA /* MyGrameViewController.swift in Sources */,
 				DDA819F529275F6400AFD33B /* UILabel+.swift in Sources */,
 				DDA81A182927610400AFD33B /* MoyaLoggingPlugin.swift in Sources */,
@@ -600,8 +610,10 @@
 				DDA81A22292761D900AFD33B /* StatusCase.swift in Sources */,
 				DDA819EF29275F4900AFD33B /* Image.swift in Sources */,
 				DDA819F129275F5500AFD33B /* UIImageView+.swift in Sources */,
+				E773E80029298F2200C98A62 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				DD9E1C35292961460042298F /* UIView+.swift in Sources */,
 				DDA819ED29275F4200AFD33B /* Identifier.swift in Sources */,
+				E773E7FC292985C500C98A62 /* UIStackView+.swift in Sources */,
 				C3A065E02929674000A5DCDF /* MyGraMeModel.swift in Sources */,
 				DDA819CA29275E5900AFD33B /* SceneDelegate.swift in Sources */,
 				5244DE54292939EC0055A7BA /* ReviewResponse.swift in Sources */,
