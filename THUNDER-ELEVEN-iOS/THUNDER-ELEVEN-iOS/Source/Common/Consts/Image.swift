@@ -10,5 +10,7 @@ import UIKit.UIImage
 extension Const {
     struct Image {
 //        static let 이미지명 = UIImage(named: "이미지 파일명")
+        
+        static let img_logo = UIImage(named: "img_logo")
     }
 }
