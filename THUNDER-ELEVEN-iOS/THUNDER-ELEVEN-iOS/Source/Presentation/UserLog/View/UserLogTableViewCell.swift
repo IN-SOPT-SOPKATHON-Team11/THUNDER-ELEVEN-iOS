@@ -30,6 +30,7 @@ class UserLogTableViewCell: UITableViewCell, UITableViewRegisterable {
     private let commentLabel: UILabel = UILabel().then {
         $0.font = .contents2Regular
         $0.textColor = .gray09
+        $0.numberOfLines = 0
     }
     
     

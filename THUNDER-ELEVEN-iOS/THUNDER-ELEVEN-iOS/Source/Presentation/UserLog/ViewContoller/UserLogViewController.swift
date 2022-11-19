@@ -95,6 +95,7 @@ extension UserLogViewController: UITableViewDelegate, UITableViewDataSource{
 
         let tag: String = (userLogs?.logs[indexPath.row].impression.tag) ?? "사나운"
         let animal: String = userLogs?.logs[indexPath.row].impression.animal ?? "사자"
+        
         let comment: String = userLogs?.logs[indexPath.row].comment ?? "ㅇㅇ이랬는데 ㅇㅇㅇ이랬어요"
         cell.setDataBind(animalString: tag+animal, date: "2022/11/18", animalSeq: 1, comment: comment)
         cell.selectionStyle = .none
