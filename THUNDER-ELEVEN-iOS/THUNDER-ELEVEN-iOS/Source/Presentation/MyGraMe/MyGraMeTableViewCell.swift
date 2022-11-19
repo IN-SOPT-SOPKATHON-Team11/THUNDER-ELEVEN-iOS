@@ -12,7 +12,9 @@ import SwiftyColor
 
 // MARK: - MyGraMeTableViewCell
 
-class MyGraMeTableViewCell: UITableViewCell {
+class MyGraMeTableViewCell: UITableViewCell, UITableViewRegisterable {
+    static var isFromNib  = false
+    
     
     //MARK: - Identifier
     
@@ -23,34 +25,35 @@ class MyGraMeTableViewCell: UITableViewCell {
     private let graMeContainerView = UIView()
     private let writeLabel = UILabel().then {
         $0.textColor = .black
-        $0.font = UIFont(name: "contents3_bold", size: 14)
+        $0.font = .contents3Bold
         $0.text = "00님이 작성한"
     }
     private let dateLabel = UILabel().then{
         $0.textColor = 0x8E8E93.color
-        $0.font = UIFont(name: "Description1", size: 12)
+        $0.font = .description1
     }
     private let firstImageView = UIImageView()
     private let firstLabel = UILabel().then{
-        $0.font = UIFont(name: "contents2_bold", size: 16)
-        $0.text = "첫인상"
+        $0.font = .contents2Bold
+        $0.text = "🐰첫인상"
         $0.textColor = 0x636366.color
     }
     private let firstTagLabel = UILabel().then{
-        $0.font = UIFont(name: "Header", size: 20)
+        $0.font = .header3
     }
     private let nowImageView = UIImageView()
     private let nowLabel = UILabel().then{
-        $0.font = UIFont(name: "contents2_bold", size: 16)
-        $0.text = "현인상"
+        $0.font = .contents2Bold
+        $0.text = "🦁현인상"
         $0.textColor = 0x636366.color
     }
     private let nowTagLabel = UILabel().then{
-        $0.font = UIFont(name: "Header", size: 20)
+        $0.font = .header3
     }
     private let historyLabel = UILabel().then{
-        $0.font = UIFont(name: "contents2_regular", size: 16)
+        $0.font = .contents2Regular
         $0.text = "그래미 히스토리"
+        $0.textColor = .gray06
     }
     private let historyImageView : UIImageView = {
         let imageView = UIImageView()
@@ -68,12 +71,17 @@ class MyGraMeTableViewCell: UITableViewCell {
     required init?(coder: NSCoder){
         fatalError("init(coder:) has not been implemented")
     }
+    override func layoutSubviews(){
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top:0, left: 21, bottom: 24, right: 20))
+    }
 }
+
 //MARK: - Extensions
 
 extension MyGraMeTableViewCell {
     private func layout(){
-        backgroundColor = .white
+        backgroundColor = 0xF5F5F5.color
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 8
         contentView.layer.masksToBounds = true
@@ -112,15 +120,15 @@ extension MyGraMeTableViewCell {
         }
         nowLabel.snp.makeConstraints{
             $0.top.equalTo(nowImageView.snp.top)
-            $0.leading.equalTo(nowImageView.snp.leading).offset(-4)
+            $0.leading.equalTo(nowImageView.snp.trailing).offset(4)
         }
         nowTagLabel.snp.makeConstraints{
             $0.top.equalTo(nowLabel.snp.bottom).offset(4)
             $0.leading.equalTo(nowImageView.snp.leading)
         }
         historyLabel.snp.makeConstraints{
-            $0.trailing.equalToSuperview().offset(37)
-            $0.bottom.equalToSuperview().offset(17)
+            $0.trailing.equalToSuperview().offset(-37)
+            $0.bottom.equalToSuperview().offset(-17)
         }
         historyImageView.snp.makeConstraints{
             $0.leading.equalTo(historyLabel.snp.trailing)
@@ -128,7 +136,7 @@ extension MyGraMeTableViewCell {
         }
     }
     func dataBind(model:MyGraMeModel) {
-        writeLabel.text = model.name
+        writeLabel.text = String(describing: model.name) + "님이 작성한"
         dateLabel.text = model.date
         firstImageView.image = UIImage(named: model.firstImage)
         firstTagLabel.text = model.first
