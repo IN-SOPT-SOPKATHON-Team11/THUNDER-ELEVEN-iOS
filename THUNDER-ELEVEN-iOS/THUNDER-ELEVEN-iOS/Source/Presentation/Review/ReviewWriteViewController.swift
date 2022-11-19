@@ -20,6 +20,13 @@ class ReviewWriteViewController: UIViewController, UICollectionViewDelegate {
         $0.setBackgroundImage(UIImage(named: "ic_chevron-left"), for: .normal)
     }
     
+    private let sendToReivewButton = UIButton().then {
+        $0.setTitle("기록 남기기", for: .normal)
+        $0.setTitleColor(.black, for: .normal)
+        $0.backgroundColor = .gray03
+        $0.layer.cornerRadius = 8
+    }
+    
     private let headTitle = UILabel().then {
         $0.text = "이러쿵님의 인상기록을 위해 4가지만 답변해주세요!"
         $0.setColorD(to: "4가지", with: .mainOrange)
@@ -134,12 +141,15 @@ class ReviewWriteViewController: UIViewController, UICollectionViewDelegate {
         addTarget()
         setTagCV()
         registerCell()
+        sleep(5)
+        let VC = DoneReviewViewController()
+        self.navigationController?.pushViewController(VC, animated: true)
     }
     
     private func setupViews() {
         view.addSubviews([writeScrollView])
         writeScrollView.addSubviews([contentView])
-        contentView.addSubviews([naviButton, headTitle, firstQuestion, firstButton, secondButton, secondQuestion, animalStackView,thirdQuestion, fourthQuestion, characterTagCV, commentTextField])
+        contentView.addSubviews([naviButton, headTitle, firstQuestion, firstButton, secondButton, secondQuestion, animalStackView,thirdQuestion, fourthQuestion, characterTagCV, sendToReivewButton])
         animalStackView.addArrangedSubviews([firstAnimal, secondAnimal, thirdAnimal])
     }
     
@@ -205,12 +215,19 @@ class ReviewWriteViewController: UIViewController, UICollectionViewDelegate {
             $0.leading.equalToSuperview().offset(20)
         }
         
-        commentTextField.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(20)
-            $0.top.equalTo(fourthQuestion.snp.bottom).offset(8)
-            $0.width.equalTo(335)
-            $0.height.equalTo(200)
-        }
+//        sendToReivewButton.snp.makeConstraints {
+//            $0.top.equalTo(fourthQuestion.snp.bottom).offset(8)
+//            $0.leading.equalToSuperview().offset(20)
+//        }
+        
+        
+        
+//        commentTextField.snp.makeConstraints {
+//            $0.leading.equalToSuperview().offset(20)
+//            $0.top.equalTo(fourthQuestion.snp.bottom).offset(8)
+//            $0.width.equalTo(335)
+//            $0.height.equalTo(200)
+//        }
         
     }
     
@@ -229,6 +246,7 @@ class ReviewWriteViewController: UIViewController, UICollectionViewDelegate {
         firstAnimal.addTarget(self, action: #selector(animalToggleButton), for: .touchUpInside)
         secondAnimal.addTarget(self, action: #selector(animalToggleButton), for: .touchUpInside)
         thirdAnimal.addTarget(self, action: #selector(animalToggleButton), for: .touchUpInside)
+        sendToReivewButton.addTarget(self, action: #selector(pushtToDoneVC), for: .touchUpInside)
     }
     
     private func setTagCV() {
@@ -248,6 +266,10 @@ class ReviewWriteViewController: UIViewController, UICollectionViewDelegate {
 //        let reviewWriteVC = ReviewWriteViewController()
 //        self.navigationController?.pushViewController(reviewWriteVC, animated: true)
 //    }
+    @objc private func pushtToDoneVC() {
+        let VC = DoneReviewViewController()
+        self.navigationController?.pushViewController(VC, animated: true)
+    }
     
     @objc private func toggleButton() {
         if firstButton.isSelected == true {
