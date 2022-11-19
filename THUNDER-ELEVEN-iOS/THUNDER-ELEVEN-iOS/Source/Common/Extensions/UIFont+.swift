@@ -10,15 +10,15 @@ import UIKit.UIFont
 extension UIFont {
 
   class var header1: UIFont {
-    return UIFont(name: "AppleSDGothicNeo-Bold", size: 24.0)!
+    return UIFont(name: "AppleSDGothicNeo-Regular", size: 24.0)!
   }
 
   class var header2: UIFont {
-    return UIFont(name: "AppleSDGothicNeo-Bold", size: 22.0)!
+    return UIFont(name: "AppleSDGothicNeo-Regular", size: 22.0)!
   }
 
   class var header3: UIFont {
-    return UIFont(name: "AppleSDGothicNeo-Bold", size: 20.0)!
+    return UIFont(name: "AppleSDGothicNeo-Regular", size: 20.0)!
   }
 
   class var contents1Bold: UIFont {

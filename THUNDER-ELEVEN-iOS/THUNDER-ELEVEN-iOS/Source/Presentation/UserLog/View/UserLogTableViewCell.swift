@@ -22,7 +22,7 @@ class UserLogTableViewCell: UITableViewCell, UITableViewRegisterable {
         $0.textColor = .gray06
     }
     
-    private let animalImageView: UIImageView = UIImageView().then {
+    public var animalImageView: UIImageView = UIImageView().then {
         $0.backgroundColor = .mainOrange
         $0.layer.cornerRadius = 32
     }
@@ -80,17 +80,4 @@ extension UserLogTableViewCell{
             make.trailing.equalToSuperview().offset(-46)
         }
     }
-}
-
-
-extension UILabel {
-    func setColor(to targetString: String, with color: UIColor) {
-          if let labelText = self.text, labelText.count > 0 {
-              let attributedString = NSMutableAttributedString(string: labelText)
-              attributedString.addAttribute(.foregroundColor,
-                                            value: color,
-                                            range: (labelText as NSString).range(of: targetString))
-              attributedText = attributedString
-          }
-      }
 }

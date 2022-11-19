@@ -30,7 +30,7 @@ extension UserLogRouter: TargetType{
     }
     
     var headers: [String : String]? {
-        return ["Content-Type": "application/json"]
+        return NetworkConstant.hasTokenHeader
     }
     
     

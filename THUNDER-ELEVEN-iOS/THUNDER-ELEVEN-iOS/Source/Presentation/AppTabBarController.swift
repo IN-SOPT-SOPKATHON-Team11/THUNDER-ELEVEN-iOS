@@ -37,13 +37,13 @@ final class AppTabBarController: UITabBarController {
     /// 탭뷰컨 쓸때 MainViewController 부분 수정해서 쓰면 됨! (제목, 아이콘도)
     private func setTabBar() {
         self.delegate = self
-        let firstTab = makeTabVC(vc: BaseNavigationController(rootViewController: MyProfileViewController()), tabBarTitle: "first", tabBarImg:"iconTabPersonUnfilled", tabBarSelectedImg: "iconTabPersonFilled")
+        let firstTab = makeTabVC(vc: BaseNavigationController(rootViewController: MyProfileViewController()), tabBarTitle: "", tabBarImg:"ic_home_unselect", tabBarSelectedImg: "ic_home_selected")
         firstTab.tabBarItem.tag = 0
         
-        let secondTab = makeTabVC(vc: BaseNavigationController(rootViewController: MyGrameViewController()), tabBarTitle: "second", tabBarImg: "iconTabChatUnfilled", tabBarSelectedImg: "iconTabChatFilled")
+        let secondTab = makeTabVC(vc: BaseNavigationController(rootViewController: MyGrameViewController()), tabBarTitle: "", tabBarImg: "ic_list_unselect", tabBarSelectedImg: "ic_list_selected")
         secondTab.tabBarItem.tag = 1
         
-        let thirdTab = makeTabVC(vc: BaseNavigationController(rootViewController: SelectUserViewController()), tabBarTitle: "third", tabBarImg: "iconTabSharpUnfilled", tabBarSelectedImg: "iconTabSharpFilled")
+        let thirdTab = makeTabVC(vc: BaseNavigationController(rootViewController: SelectUserViewController()), tabBarTitle: "", tabBarImg: "ic_edit_unselect", tabBarSelectedImg: "ic_edit_selected")
         thirdTab.tabBarItem.tag = 2
         
         let tabs = [firstTab, secondTab,thirdTab]
@@ -51,7 +51,7 @@ final class AppTabBarController: UITabBarController {
     }
     
     private func setTabBarItemStyle() {
-        tabBar.tintColor = .black
+        tabBar.tintColor = .white
     }
     
     /// TabBar의 UI를 지정하는 메서드
@@ -61,7 +61,7 @@ final class AppTabBarController: UITabBarController {
         appearance.shadowImage = nil
         appearance.backgroundImage = nil
         appearance.backgroundEffect = nil
-        appearance.backgroundColor = .clear
+        appearance.backgroundColor = .white
         self.tabBar.standardAppearance = appearance
         self.view.addSubviews([backgroundView])
         self.view.bringSubviewToFront(self.tabBar)
