@@ -96,17 +96,9 @@
 
 ![Untitled](https://user-images.githubusercontent.com/75439868/202864459-71a0ea6e-593c-4c2d-a19a-a630717914b7.png)
 
-<details>
-<summary markdown="1"> UI 구조 스케치</summary>
-<div markdown="1">     
-<img width="451" alt="4" src="https://user-images.githubusercontent.com/75439868/202864690-297e2636-f5dc-44e6-af57-58a89765a6a1.png">
-<img width="451" alt="4" src="https://user-images.githubusercontent.com/75439868/202864695-f30b7e44-214e-465c-9ce5-63b880b23441.png">
-<img width="451" alt="4" src="https://user-images.githubusercontent.com/75439868/202864702-9d45ed5d-3bdb-4767-b7d4-3240f7af6674.png">
-<img width="451" alt="4" src="https://user-images.githubusercontent.com/75439868/202864622-293c75d5-46de-4555-962c-46a287726a02.png">
-<img width="514" alt="5" src="https://user-images.githubusercontent.com/75439868/202864624-a478c5ac-1e74-4f1b-95d2-5916608e7174.png">
-<img width="478" alt="6" src="https://user-images.githubusercontent.com/75439868/202864629-55988253-0915-4259-8ab5-783643c8c380.png">
-</div>
-</details>
+## UI 구조 스케치
+![Frame 1 (2)](https://user-images.githubusercontent.com/109775321/202874870-df89261f-955a-4697-8394-90fa20610831.png)
+
 
 
 ## 멤버 소개
@@ -118,9 +110,10 @@
 - 로그인
 ### ⚽️ 서린
 - 유저 상세
+- 프로필
 ### 🥅 채은
 - 유저별 로그 리스트
-- 프로필
+
 
 ![7712945](https://user-images.githubusercontent.com/75439868/202626809-ee310f5f-18fb-4b1d-8d2d-e87c46ca4aa1.jpeg)
 
